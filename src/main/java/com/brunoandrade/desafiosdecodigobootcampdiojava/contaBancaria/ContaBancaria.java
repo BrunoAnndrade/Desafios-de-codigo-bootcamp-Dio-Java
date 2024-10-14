@@ -1,0 +1,33 @@
+package com.brunoandrade.desafiosdecodigobootcampdiojava.contaBancaria;
+
+import java.util.Scanner;
+
+public class ContaBancaria {
+    public static void main(String[] args) {
+
+        // Conhecer e importar a classe Scanner
+        Scanner scanner = new Scanner(System.in);
+
+        // Exibir mensagem para os usuários e obter os valores digitados no terminal
+        System.out.println("Por favor, digite o número da Conta:");
+        int numero = scanner.nextInt();
+
+        System.out.println("Por favor, digite o número da Agência:");
+        String agencia = scanner.next();
+
+        scanner.nextLine();
+
+        System.out.println("Por favor, digite o nome do Cliente:");
+        String nomeCliente = scanner.nextLine();
+
+        System.out.println("Por favor, digite o saldo:");
+        double saldo = scanner.nextDouble();
+
+        // Exibir a mensagem da conta criada
+        System.out.println("Olá " + nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é " +
+                agencia + ", conta " + numero + " e seu saldo " + saldo + " já está disponível para saque.");
+
+        // Fechar o Scanner
+        scanner.close();
+    }
+}
